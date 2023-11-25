@@ -17,5 +17,21 @@ let listImgHtml = '';
 images.forEach(imag => {
   listImgHtml += `<li> <img src= '${imag.url}' alt= '${imag.alt}'> </li>`
   return listImgHtml
-})
+ })
 gallery.insertAdjacentHTML('afterbegin', listImgHtml);
+
+// Також можна використати innerHTML
+// gallery.innerHTML = listImgHtml;
+
+// Інший варіант 
+
+// const gallery = document.querySelector('.gallery');
+// const elements = images.map(image => {
+//   const list = document.createElement('li');
+//   const img = document.createElement('img');
+//   img.src = image.url;
+//   img.alt = image.alt;
+//   list.appendChild(img);
+//   return list;
+// })
+// gallery.append(...elements);
