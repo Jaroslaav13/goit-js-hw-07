@@ -1,8 +1,11 @@
-const sumCat = document.querySelectorAll('#categories .item');
-console.log(`Number of categories: ${sumCat.length}`);
-sumCat.forEach(category => {
-    const nameCat = category.querySelector('h2').textContent;
-    const totalSubcategory = category.querySelectorAll('li')
-    console.log(`Category: ${nameCat}`);
-    console.log(`Elements: ${totalSubcategory.length}`);
-})
+const categoriesList = document.querySelectorAll('#categories .item');
+
+console.log(`Number of categories: ${categoriesList.length}`);
+
+categoriesList.forEach(category => {
+    const categoryName = category.querySelector('h2').textContent;
+    const categoryItems = category.querySelectorAll('ul li');
+    
+    console.log(`Category: ${categoryName}`);
+    console.log(`Elements: ${categoryItems.length}`);
+});
