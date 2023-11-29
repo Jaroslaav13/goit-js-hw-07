@@ -13,11 +13,10 @@ const images = [
   },
 ];
 const gallery = document.querySelector('.gallery');
-let listImgHtml = '';
-images.forEach(imag => {
-  listImgHtml += `<li> <img src= '${imag.url}' alt= '${imag.alt}'> </li>`
-  return listImgHtml
- })
+const listImgHtml = images.map(imag => {
+ 
+  return `<li> <img src='${imag.url}' alt='${imag.alt}'> </li>`
+ }).join('')
 gallery.insertAdjacentHTML('afterbegin', listImgHtml);
 
 // Також можна використати innerHTML
